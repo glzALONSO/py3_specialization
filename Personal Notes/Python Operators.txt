@@ -1,0 +1,85 @@
+Python Operators:
+
+Order of precedence: expressions are evaluated from left to right.
+- Parentheses
+- Exponents
+- Multiplication/division
+- Addition/Substraction
+- Comparisson operators
+- not
+- and
+- or
+
+Concatenation and repetions follow the same order of operations as addition and multiplication.
+
+- "*": Creates a new list by reapeating and item or a list a certain number of times.
+	Implementation:
+		- <list/item> * <int> --> number of repetitions.
+		- Tuple unpacking: automatically unpacks the tuple elements into a function arg.
+			- *tuple
+
+
+- "+": Concatenate Strings and Lists and tuples. Can only concatenate objets of the same type.
+	Implementation:
+		- <str1> + <str2> + <str3> ...
+		- <list1> + <list2> + <list3> ...
+		- tuple1 = tuple1[n:m] + <tuple2> + tuple1[n:m]
+		- list1 += [list2] --> same as list1.append(list2) --> does not creates a new copy.
+		- list1 = list1 + list2 --> creates a new copy (different id)
+
+- "=": assignment operator
+	Implementation:
+		- Tuple packing: automatically creates a tuple by assigning multiple values to a variable.
+			- var1 = <value1>, <value2>, <value3>, <value4>, ...
+		- Unpacking: can be done with any sequence, list, tuples, etc
+			- var1, var2, var3, var4, ... = tuple/list--> tuple/list elements == elements to unpack (left side).
+		- Swapping values between variables:
+			- (a, b) = (b, a) --> b value is swapped with a value; a value is swapped with b value
+- "/": Division
+
+- "//": Quotient
+
+- "%": Remainder
+		
+- "[]": Slicing, provides access to certain element or range of elements (non-inclusive).
+	Implementation:
+		Positive indices: 0, 1, 2, 3, 4 ...
+		Negative indices: -1, -2, -3, -4, -5 ...
+
+		- access to a single element: 
+			- string[index] 
+			- list[index]
+		- slicing: 
+			- string[low_limit:up_limit]
+			- list[low_limit:up_limit] --> creates a new list
+			- [:up_limit]
+			- [low_limit:]
+			- [:]	
+		- access the last element:
+			- string[-1]
+			- list[-1]
+		- replace a subset in a list:
+			- list1[low_limit:up_limit] = [list2] -- if list2 == [] items are removed.
+		- clone a list: cloning a list avoid aliasing.
+			- new_list = list[:]
+
+- del : deletes elements from a list, dictionary.
+	Implementation:
+		- del list[low_limit:up_limit]
+		- del dict1[<key>]
+
+Comparison Operators:
+
+- " == " : equal
+
+- " != " : not equal
+
+- " > ": greater than
+
+- " < ": less than
+
+- " >= ": greater or equal
+
+- " <= ": less or equal
+
+

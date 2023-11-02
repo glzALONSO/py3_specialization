@@ -1,0 +1,166 @@
+Python Methods
+
+Strings, Lists and Tuples:
+
+Strings and Tuples are inmutable.
+Lists are mutable.
+Python is a 0-index.
+Mutators changes an object.
+Hybrids changes an object and returns a value.
+
+- count(): count the ocurrences of a substring. Count the ocurrences of an item in a list
+	Implementation:
+		- string.count("substring")
+		- list.count(<item>)
+
+- index(): find the index of the first ocurrence of a substring.
+	Implementation:
+		-string.index("substring")
+		-list.index(<item>)
+
+- upper(): returns a copy in upper case letters.
+	Implementation:
+		-string.upper()
+
+- lower(): returns a copy in lower case letters.
+	Implementation:
+		-string.lower()
+
+- strip(): removes whitespaces(spaces, tabs, \n) at the begining and the end of the string.
+	Implementation:
+		-string.strip()
+
+- split(): uses a delimiter to split the string into substrings. Returns a list of
+	   substrings cutted at every instance of the delimiter, excluding the delimiter.
+	   No arg --> delimiter = spaces
+	 Implementation:
+		-string.split("delimiter") --> delimiters examples: ". ", " "
+
+- join(): merges a list of strings into a single string.
+	Implementation:
+		- joint.join(<list of string>) --> ";".join(["Hello", "World"])
+
+- append(): adds an element to the end of a list.
+	Implementation:
+		-list.append("list_element")
+
+- len(): returns an int indicating the number of elements in a list, string and dict.
+	Implementation:
+		- len(<list>)
+		- len(<string>)
+		- len(<dict>) --> number of key value pairs.
+
+- type(): returns the type of something.
+	Implementation:
+		- type(<item>)
+
+-list(): returns a list from an iterable.
+	Implementation:
+		- list(<iterable>)
+
+- id(): returns the id of an object
+	Implementation
+		- id(<object>)
+
+- insert(): insert an element into a list, this method does not replace any element.
+	Implementation:
+		- list.inster(<index>, <item>)
+
+- reverse(): reverse the order of elements in the list
+	Implementation:
+		- list.reverse()
+- sort(): reorders the elements in a list from smallest to biggest
+	Implementation:
+		- list.sort() --> strings sorted alphabetically
+
+- sorted(): returns a new list with the values reordered from smallest to biggest without changing the original list.
+	    Sequences of tuples are sorted based on the first elements, with ties being broken by the second elements and then third elements, etc.
+	    Strings are sorted alphabetically. Numbers from smallest to biggest.
+	Implementation:
+		- sorted_sequence = sorted(<sequence>, reverse, key)
+			- reverse parameter (boolean): True --> biggest to smallest
+			- key parameter (function): applies the function to the unsorted list; sorting will be performed based on the resulting list.
+			 
+- remove(): removes all occurences of specific value from a list.
+	Implementation:
+		- list.remove(<value_to_be_removed>)
+
+- pop(): removes the last item from the list and returns it
+	Implementation:
+		- list.pop()
+		- list.pop(<index>) removes and return the item at the index.
+- format(): formats a string.
+	Implementation:
+		- "string1 {} {}".format(string2, string3)
+		- {:.2f}: when using float numbers. specify how many decimal places to use.
+
+Files:
+
+Relative paths start with ".." which means go up one level in the file structure.
+
+file objects support iteration but not slicing
+
+- open(): returns a file object
+	Implementation:
+		- file = open(<path>, action) --> action:
+							- read: "r"
+							- write: "w" creates a file when one does not exist. When exists deletes contents of the file.
+
+- read(): read and return the contents of the entire file as a single string.
+	Implementation:
+		- file.read(<numbers of character>) --> no arg: all characters
+
+- readline(): return a single line of the file up to and including \n. Returns sequantially when called multiple times.
+	Implementation:
+		- file.readline()
+
+- readlines(): returns a list of strings containg all the lines in a file. delimiter --> \n
+	Implementation:
+		- file.readlines()
+
+- write(): adds a string to the end of the file.
+	Implementation:
+		- file.write(<string\n>)
+
+- close(): closes a file.
+	Implementation:
+		- file.close()
+
+Dictionaries: involve the computation of a hash function.
+
+Iterating over a dictionary implicitly iterates over the keys.
+
+Assignment --> dict1[<key>] = <value>. Key is used to acces the value.
+
+- keys():
+	Implementation: returns an iterable containing the all the keys in the dict.
+		- dict.keys()
+		- list(dict.keys()) --> get the keys into a list.
+
+- values(): returns an iterable containing the values in the dict.
+	Implementation:
+		- dict.values()
+
+- items(): returns an iterable containing all the key-value pairs in the dict as tuples.
+	Implementation:
+		- dict.items()
+
+- get(): returns the value of the key provided as argument.
+	Implementation:
+		- dict.get(<key>, <return_value>) --> if no second argument is provided, method returns None.
+
+- sorted(): alphabetically sorts the keys of a dict.
+	Implementation:
+		- sorted(dict.keys())
+
+- copy(): returns a copy of a dictionary.
+	Implementation:
+		- dict_copy = dict.copy()
+
+- enumerate(): returns a tuple containing the index and the item in the sequence.
+	Implementation:
+		- enumerate(<sequence>) --> (index, item)
+
+Sorting:
+
+- 	

@@ -1,0 +1,50 @@
+Python Keywords:
+
+An empty string is a substring of any other string.
+
+- and: 
+- as 
+- assert
+- break
+- class
+- continue
+- def: marks the definition of a function:
+	Implementation:
+		def func_name(arg1, arg2, ...):
+- del
+- elif
+- else
+- except
+- exec
+- finally
+- for:
+	Implementation:
+		- for <loop_var_name> in <sequence>:
+- from:
+	Implementation: from <module> import <class>
+- global: declare a variable to be global.
+	Implementation:
+		- global <variable>
+- if
+- import: used to import a complete module.
+	Implementation: import <module>
+- in: can be used to check for a substring or whether an item is contained in a list and dict.
+- is: checks whether two variables are pointing to the same object (aliased)	.
+- lambda: used to define a lambda function
+	Implementation:
+		- <f_name> = lambda <arg>: <return expresion>
+- nonlocal
+- not: reverse a condition.
+- or
+- pass
+- raise
+- return: indicates the values that will be returned by a function. Note: interrupts the execution of the function. Procedures do not return anything.
+	Implementation:
+		- inside a function: return <value/expression to be returned>
+- try
+- while
+- with: Python context manager
+- yield
+- True
+- False
+- Nose

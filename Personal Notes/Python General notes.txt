@@ -1,0 +1,30 @@
+Python General Notes:
+
+Functions:
+
+When passing mutable Objects as args, as result of aliasing, Mutable Objects in the global scope will be modified depending on the action
+performed on them in the local scope. Actions in the local scope that result in the creation of a new object will not mutate the Global Object. 
+Actions in the local scope that do not create a new object will mutate the Global Object.
+
+Keyword arguments should always be expressed after positional arguments.
+Default values are only evaluated when the function is defined.
+
+Variable Scope Rules:
+
+1.- Python is divided into Object Space and Name space.
+
+2.- All objects live in object space.
+
+3.- The name space is divided into nested spaces: built-in, global, local.
+
+4.- variables are retrived starting at the namespace containing the expression and work outward.
+
+
+Object Space:
+
+Name Space: all three are nested. Local namespaces live in Global namespace, Global namespaces live built-in namespace.
+	- Built-in scope: built-in function and variables defined when python starts up
+		
+		- Global Scope: variables and functions declared by the user.
+			
+			- Local Scope: assigned variables and parameters inside a namespace.
