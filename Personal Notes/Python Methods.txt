@@ -161,6 +161,25 @@ Assignment --> dict1[<key>] = <value>. Key is used to acces the value.
 	Implementation:
 		- enumerate(<sequence>) --> (index, item)
 
-Sorting:
+JSON Module: import json
 
-- 	
+- loads(): takes a JSON-formatted string as input and produces a python object (a dictionary or a list) as output.
+	Implementation:
+		- json.loads(<JSON-formatted_string>)
+
+- dumps():  takes a python object, typically a dictionary or a list, and returns a string, in JSON format.
+	Implementation:
+		- json.dumps(<python_object) --> sort_keys=True: keys of the output dict sorted alphabetically.
+					     --> indent=<int>: provides a human-readeable string using indentation and newlines.
+
+Copy Module: import copy
+
+- deepcopy(): Return a deep copy. Deep copying is only relevant for compound objects (objects that contain other objects, like lists or class instances)
+	Implementation:
+		-copy.deepcopy(<object>)
+
+
+- copy(): Return a shallow copy.
+	Implementation:
+		-copy.copy(<object>) 
+

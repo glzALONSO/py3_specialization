@@ -19,7 +19,9 @@ An empty string is a substring of any other string.
 - finally
 - for:
 	Implementation:
-		- for <loop_var_name> in <sequence>:
+		- for <loop_var_name> in <sequence>: --> iterate through a sequence
+			- for function in <function_sequence>: --> apply several functions to a piece of data
+ 				function(data)
 - from:
 	Implementation: from <module> import <class>
 - global: declare a variable to be global.

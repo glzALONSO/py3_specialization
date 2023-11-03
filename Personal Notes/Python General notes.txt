@@ -9,6 +9,10 @@ Actions in the local scope that do not create a new object will mutate the Globa
 Keyword arguments should always be expressed after positional arguments.
 Default values are only evaluated when the function is defined.
 
+Dictionaries:
+
+Key must be inmutable objects like a string, tuple or numbers, keys cannot be lists or dicts.
+
 Variable Scope Rules:
 
 1.- Python is divided into Object Space and Name space.
