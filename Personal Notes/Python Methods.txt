@@ -94,6 +94,27 @@ Hybrids changes an object and returns a value.
 		- "string1 {} {}".format(string2, string3)
 		- {:.2f}: when using float numbers. specify how many decimal places to use.
 
+- map(): returns an iterable whose items are the elements from a sequence transformed by the transformation function.
+	Implementation:
+		- map(<transformer>, <sequence>) --> transformer should return a single value.
+
+- filter(): return an iterable whose items are the elements from a sequence filtered by the filtration fuction.
+	Implementation:
+		- filter(<filter>, <sequence>) -- filter should return a boolean value
+
+- LIST COMPREHENSIONS: 
+
+- Mapping: [<transformer_expression> for <var_name> in <sequence>]
+	Implementation:
+		- [value * 2 for value in things]
+
+- Filtering: [<transformer_expression> for <var_name> in <sequence> if <filter_expression>]
+	Implementation:
+		- [num for num in nums if num % == 0] --> <transformer expression> equal to <var_name> to avoid performing a transformation.
+
+- Map and Filter: [<transformer_expression> for <var_name> in <sequence> if <filter_expression>]
+	Implementation:
+		- [x*2 for x in things if x % 2 == 0]
 Files:
 
 Relative paths start with ".." which means go up one level in the file structure.
@@ -126,8 +147,9 @@ file objects support iteration but not slicing
 	Implementation:
 		- file.close()
 
-Dictionaries: involve the computation of a hash function.
-
+Dictionaries: 
+Involve the computation of a hash function. 
+When you copy a nested list, you do not also get copies of the internal lists.
 Iterating over a dictionary implicitly iterates over the keys.
 
 Assignment --> dict1[<key>] = <value>. Key is used to acces the value.
@@ -162,6 +184,8 @@ Assignment --> dict1[<key>] = <value>. Key is used to acces the value.
 		- enumerate(<sequence>) --> (index, item)
 
 JSON Module: import json
+
+Check the JSON editor online.
 
 - loads(): takes a JSON-formatted string as input and produces a python object (a dictionary or a list) as output.
 	Implementation:
