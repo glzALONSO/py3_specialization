@@ -196,6 +196,7 @@ Check the JSON editor online.
 		- json.dumps(<python_object) --> sort_keys=True: keys of the output dict sorted alphabetically.
 					     --> indent=<int>: provides a human-readeable string using indentation and newlines.
 
+
 Copy Module: import copy
 
 - deepcopy(): Return a deep copy. Deep copying is only relevant for compound objects (objects that contain other objects, like lists or class instances)
@@ -207,3 +208,21 @@ Copy Module: import copy
 	Implementation:
 		-copy.copy(<object>) 
 
+
+Requests Module:
+
+- json(): extract the JSON Data contained in the responso Object obtained after a request by passing the contents of the .txt attribute to the json.loads().
+	Implementation:
+		- response.json()
+
+- url: displays the full url generated from the input parameters.
+	Implementation: 
+		- response.url
+
+- text: this attribute contains the contents of the file or other information available from the URL.
+	Implementataion:
+		- response.text
+
+- get(base_url, params): send an HTTP GET request to the url provided as argument.
+	Implementation:
+		- request.get(<base_url>, params=dict) --> params must be a dictionary containing the key-value pairs that will be appended to the base url in order to perform the request.
