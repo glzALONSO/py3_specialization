@@ -1,0 +1,7 @@
+Generate an API Request
+
+In order to create a query it is necessary to go through the API documentation
+and search for the keys and values that are compatible with the API.
+
+Such parameters should be passed as a dictionary in the form d = {<key>: <value>}
+
