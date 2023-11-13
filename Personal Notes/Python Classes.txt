@@ -1,0 +1,43 @@
+Basics of Classes in Python.
+
+- Defining a class:
+
+	- class <class_name>:
+
+
+Class Methods:
+
+- Mandatory Parameter self: 
+
+	- The class instance must be passed as an argument to all class methods, therefore it is
+	  mandatory that all class methods receive at least one argument. Self is the standard 
+	  name of this argument.
+
+
+- Defining the constructor method: 
+	
+	- The constructor is automatically called each time a 
+	  new instance of the class is created, it allows to set up class attributes 
+	  that will provide the newly created instance with its initial state values.
+		
+		- def __init__(self, parameter1, parameterN):
+			# the user can define initial state values by adding parameters (or arguments)
+			# to the constructor and assigning them to and instance attribute.
+			self.<instance_attribute1> = parameter1
+			...
+			self.<instance_attributeN> = parameterN
+			# initial state values can also be set to a predefined value.
+			self.<predefined_instance_attribute> = <some_value>
+
+- Calling the constructor method:
+	
+	- Each time the constructor is called it creates a new objecto of the class <class_name>
+	  and it sets up its initial state values. This process is called instantiation.
+	  Naturally, each time the constructor is called  it creates a new instance of 
+	  the class <class_name> and returns it as an object than can assigned to a variable.
+	
+	- Implementation:
+		- <instance_name> = <class_name>()
+
+
+	
