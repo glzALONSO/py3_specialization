@@ -1,5 +1,13 @@
 Basics of Classes in Python.
 
+Before coding any class:
+
+- Think about which kind of data do you want to represent with your class.
+- Think about the base case of every instance.
+- Think about the instance variables: What is unique (identifiers) about each instance.
+- Think about the methods: What operations (actions) can be performed by each instance.
+- Think about the printed representation of the instance.
+
 - Defining a class:
 
 	- class <class_name>:
@@ -40,4 +48,12 @@ Class Methods:
 		- <instance_name> = <class_name>()
 
 
-	
+- String representation Method:
+
+	- The string representation method is used to override the Python default implementation
+	  of representing an object as a string. It is normally useful when providing more
+	  information about the initial state values of an instance.
+
+	- Implementation:
+		- def __str__(self):
+			return <string> 	

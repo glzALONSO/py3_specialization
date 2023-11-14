@@ -79,7 +79,9 @@ Hybrids changes an object and returns a value.
 	Implementation:
 		- sorted_sequence = sorted(<sequence>, reverse, key)
 			- reverse parameter (boolean): True --> biggest to smallest
-			- key parameter (function): applies the function to the unsorted list; sorting will be performed based on the resulting list.
+			- key parameter (function): 
+				- applies the function to the unsorted list; sorting will be performed based on the resulting list.
+				- when sorting a list of instances it is possible to pass an instance method that returns the value of an instance attribute; sorting will be performed based on such value.
 			 
 - remove(): removes all occurences of specific value from a list.
 	Implementation:
