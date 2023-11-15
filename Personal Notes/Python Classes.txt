@@ -8,6 +8,44 @@ Before coding any class:
 - Think about the methods: What operations (actions) can be performed by each instance.
 - Think about the printed representation of the instance.
 
+Instance Variables vs Class Variables: --> Variable = attribute
+
+	- Class variables are set as part of the class definition.
+	  The assignment expression of a class variable is placed outside of any method.
+	  Method definitions also create class variables.
+	
+	- Instance variables are set inside the constructor method.
+	  The assignment expressions of an instance variable is placed in the constructor method.
+
+Interpreter Rules for looking up attributes
+
+- When the interpreter sees an expression of the form <obj>.<varname>, it:
+	
+	1.- First, it checks for an instance variable or an instance method by the name it’s looking for.
+	2.- If an instance variable or method by that name is not found, it checks for a class variable.
+	3.- If no class variable is found, it looks for a class variable in the parent class.
+	4.- If no class variable is found, the interpreter looks for a class variable in THAT class’s parent (the “grandparent” class).
+	5.- This process goes on until the last ancestor is reached, at which point Python will signal an error.
+
+	**Overriding Methods**: If a method is defined for a class, and also defined for its 
+				parent class, the subclass’ method is called and not the parent’s.
+				This follows the rules for looking up attributes as the interpreter
+				calls the first	method that it founds.
+
+- SUPER: Invoking the parent(super)class's Method:
+
+	- the super() function can be used when the superclasss method is overriden in the 
+	  subclass and the subclass defined method aims to extend the superclass method
+	  functionality. super() returns a temporary object of the superclass that allows to call
+	  the methods belonging to the superclass.
+
+	- Implementation:
+		inside the subclass definition...
+			def <extended_method>(self):
+				super().<method_to_be_extended>() --> passing parameters to the superclass methods depends on whether the method requires them.
+				""" here add the extended functionality"""
+	  
+		
 - Defining a class:
 
 	- class <class_name>:
@@ -56,4 +94,7 @@ Class Methods:
 
 	- Implementation:
 		- def __str__(self):
-			return <string> 	
+			return <string>
+
+
+Add notes on how python looks for attributes	
