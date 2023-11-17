@@ -4,9 +4,13 @@ An empty string is a substring of any other string.
 
 - and: 
 - as 
-- assert
+- assert:
+	evaluates a python boolean expression, if the expression evaluates to False, raises a runtime error.
+
+		Implementation:
+			- assert <boolean_expression>
 - break
-- class
+- class: defines a new class.
 - continue
 - def: marks the definition of a function:
 	Implementation:
@@ -14,7 +18,12 @@ An empty string is a substring of any other string.
 - del
 - elif
 - else
-- except
+- except: catches exceptions:
+	Implementation:
+		-try:
+			<some_code> --> if nothing is wrong with this code except does not excute.
+		 except <error:type>:
+			<some_other_code>
 - exec
 - finally
 - for:
@@ -43,7 +52,14 @@ An empty string is a substring of any other string.
 - return: indicates the values that will be returned by a function. Note: interrupts the execution of the function. Procedures do not return anything.
 	Implementation:
 		- inside a function: return <value/expression to be returned>
-- try
+- try: handling exceptions.
+
+	Implementation:
+		- try:
+			<somecode> --> if this code fails <some_other code does not execute>
+			<some_other_code>
+		  except <error:type>:
+			<except_code> --> in case <somecode> fails exepct block is executed.  
 - while
 - with: Python context manager
 - yield
