@@ -42,12 +42,12 @@ Test Cases:
 
 - Side effect tests:
 
-Test Driven Development:
+	Test Driven Development:
 
-- Make sure you know what you are trying to accomplish. Then you can write appropriate unit tests.
+		- Make sure you know what you are trying to accomplish. Then you can write appropriate unit tests.
 
-- Start with a working skeleton program and make small incremental changes. At any point, if there is an error, you will know exactly where it is.
+		- Start with a working skeleton program and make small incremental changes. At any point, if there is an error, you will know exactly where it is.
 
-- Use temporary variables to hold intermediate values so that you can easily inspect and check them.
+		- Use temporary variables to hold intermediate values so that you can easily inspect and check them.
 
-- Once the program is working, you might want to consolidate multiple statements into compound expressions, but only do this if it does not make the program more difficult to read.
+		- Once the program is working, you might want to consolidate multiple statements into compound expressions, but only do this if it does not make the program more difficult to read.

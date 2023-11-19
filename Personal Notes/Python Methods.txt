@@ -228,3 +228,11 @@ Requests Module:
 - get(base_url, params): send an HTTP GET request to the url provided as argument.
 	Implementation:
 		- request.get(<base_url>, params=dict) --> params must be a dictionary containing the key-value pairs that will be appended to the base url in order to perform the request.
+
+Exploring Library Documentation:
+
+- dir(): 
+
+- help():
+
+- getmro(): import from the inspect library
