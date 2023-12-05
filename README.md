@@ -11,7 +11,7 @@ The first assignment introduces the Python the pillow library and consists in ma
 
 Results:
 
-!(/Course_5_project/assignment_1_result.png)
+![assignment_1_resutls](/Course_5_project/assignment_1_result.png)
 
 The final assignmet combines the pillow, pytesseract and opencv libraries to extract the text and faces contained in an image to perform a simple keyword search that returns the faces found in the image when a match for the keyword is found in the extracted text.
 
