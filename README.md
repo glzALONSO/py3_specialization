@@ -18,7 +18,37 @@ The first assignment introduces the Python the pillow library and consists in ma
 
 # Final assignment
 
-The final assignmet combines the pillow, pytesseract and opencv libraries to extract the text and faces contained in an image to perform a simple keyword search that returns the faces found in the image when a match for the keyword is found in the extracted text.
+The final assignmet combines the pillow, pytesseract and opencv libraries to extract the text and faces contained in an image to perform a simple keyword search that returns the faces found in the image when a match for the keyword is found in the extracted text. The [WorkImage file](/Course_5_project/WorkImage.py) file contains the solution to the assignment.
+
+## Face detection
+
+Face detection is performed using the opencv library and the Haar Cascade classifier algorithm. The following code provides the result of the face detection step:
+
+```python  
+            with Image.open(my_img) as pil_img:
+                work_image = WorkImage(pil_img, file)
+                detection = work_image.faceDetectionAndDisplay(draw_b_boxes=1)
+                detection.show()
+```
+### Results:
+
+![assignment_1_resutls](/Course_5_project/face_detection_result.png)
+
+## Optical Character Recognition (OCR)
+
+Text is extracted from the images using the tesseract OCR engine along with its Python wrapper pytesseract. The following code provides the result of the OCR step:
+
+```python  
+with Image.open(my_img) as pil_img:
+    work_image = WorkImage(pil_img, file)
+    contact_sheet = work_image.search_keyword("Christopher")
+    
+    if contact_sheet == None:
+        pass
+    else:
+        display(contact_sheet)
+```
+## Keyword search
 
 ```python  
 with Image.open(my_img) as pil_img:
