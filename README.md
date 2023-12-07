@@ -32,7 +32,7 @@ Face detection is performed using the opencv library and the Haar Cascade classi
 ```
 ### Results:
 
-![assignment_1_resutls](/Course_5_project/face_detection_result.png)
+![assignment_1_resutls](/Course_5_project/face_detection_result.PNG)
 
 ## Optical Character Recognition (OCR)
 
