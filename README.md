@@ -55,12 +55,12 @@ Snyder reelected
 to second term
 ```
 
-
 ## Keyword search
 
 ```python  
 with Image.open(my_img) as pil_img:
-    work_image = WorkImage(pil_img, file)
+    rgb_img = pil_img.convert("RGB")
+    work_image = WorkImage(rgb_img, file_name)
     contact_sheet = work_image.search_keyword("Christopher")
     
     if contact_sheet == None:
@@ -68,3 +68,5 @@ with Image.open(my_img) as pil_img:
     else:
         display(contact_sheet)
 ```
+### Results:
+![search_keyword_result](/Course_5_project/search_keyword_result.PNG)
