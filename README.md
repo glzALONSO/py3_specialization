@@ -25,10 +25,11 @@ The final assignmet combines the pillow, pytesseract and opencv libraries to ext
 Face detection is performed using the opencv library and the Haar Cascade classifier algorithm. The following code provides the result of the face detection step:
 
 ```python  
-            with Image.open(my_img) as pil_img:
-                work_image = WorkImage(pil_img, file)
-                detection = work_image.faceDetectionAndDisplay(draw_b_boxes=1)
-                detection.show()
+with Image.open(my_img) as pil_img:
+    rgb_img = pil_img.convert("RGB")
+    work_image = WorkImage(rgb_img, file_name)
+    detection = work_image.faceDetectionAndDisplay(draw_b_boxes=1)
+    detection.show()
 ```
 ### Results:
 
@@ -38,16 +39,23 @@ Face detection is performed using the opencv library and the Haar Cascade classi
 
 Text is extracted from the images using the tesseract OCR engine along with its Python wrapper pytesseract. The following code provides the result of the OCR step:
 
-```python  
+```python
 with Image.open(my_img) as pil_img:
-    work_image = WorkImage(pil_img, file)
-    contact_sheet = work_image.search_keyword("Christopher")
-    
-    if contact_sheet == None:
-        pass
-    else:
-        display(contact_sheet)
+    rgb_img = pil_img.convert("RGB")
+    work_image = WorkImage(rgb_img, file_name)
+    detection = work_image.extract_text(draw_b_boxes=1)
+    detection.show()
+    print(work_image.text)
 ```
+### Results:
+![OCR step result](/Course_5_project/ocr-demo-0.PNG)
+
+```pycon
+Snyder reelected
+to second term
+```
+
+
 ## Keyword search
 
 ```python  
