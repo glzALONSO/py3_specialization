@@ -38,16 +38,29 @@ Face detection is performed using the opencv library and the Haar Cascade classi
 
 Text is extracted from the images using the tesseract OCR engine along with its Python wrapper pytesseract. The following code provides the result of the OCR step:
 
-```python  
+```python
 with Image.open(my_img) as pil_img:
     work_image = WorkImage(pil_img, file)
-    contact_sheet = work_image.search_keyword("Christopher")
-    
-    if contact_sheet == None:
-        pass
-    else:
-        display(contact_sheet)
+    detection = work_image.extract_text(draw_b_boxes=1)
+    detection.show()
+    print(work_image.text)
 ```
+### Results:
+![OCR step result](/Course_5_project/res-ocr-0.PNG)
+
+```python console
+Snyder reelected
+to second term
+```
+
+```python
+with Image.open(my_img) as pil_img:
+    work_image = WorkImage(pil_img, file)
+    detection = work_image.extract_text(draw_b_boxes=1)
+    detection.show()
+    print(work_image.text)
+```
+
 ## Keyword search
 
 ```python  
