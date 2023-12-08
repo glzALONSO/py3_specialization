@@ -46,9 +46,9 @@ with Image.open(my_img) as pil_img:
     print(work_image.text)
 ```
 ### Results:
-![OCR step result](/Course_5_project/res-ocr-0.PNG)
+![OCR step result](/Course_5_project/res-ocr-1.PNG)
 
-```python console
+```pycon
 Snyder reelected
 to second term
 ```
