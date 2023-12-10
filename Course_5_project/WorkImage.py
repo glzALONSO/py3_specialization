@@ -1,4 +1,3 @@
-import zipfile
 from PIL import Image
 import pytesseract
 import cv2 as cv
@@ -11,7 +10,6 @@ class WorkImage:
 
     # define the instance attributes
     def __init__(self, pil_img, file_name):
-        self.file_name = file_name
         self.pil_img = pil_img
         self.bounding_boxes = list()
         self.text = ''
@@ -19,6 +17,7 @@ class WorkImage:
         self.minNeighbors = 7
         self.minSize = (30, 30)
         self.maxSize = (300, 300)
+        self.file_name = file_name
 
     def faceDetectionAndDisplay(self, draw_b_boxes=0,
                                 face_cascade=face_cascade):  # detection should be improved as it is detecting other things
@@ -53,7 +52,7 @@ class WorkImage:
                 img_array = cv.rectangle(img_array, start_point, end_point, color, thickness)
 
             detection = Image.fromarray(img_array)
-
+            print(detection.mode)
             return detection
 
     def buildContactSheet(self):
@@ -123,18 +122,29 @@ class WorkImage:
         self.text = pytesseract.image_to_string(threshold)
 
         if draw_b_boxes == 1:
-            bounding_boxes = pytesseract.image_to_boxes(threshold)
-            # draw bounding boxes
-            # for (x, y, w, h) in bounding_boxes:
-            # start_point = (x, y)  # top left
-            # end_point = (x + w, y + h)
-            # color = (255, 0, 255)
-            # thickness = 4
-            # img_array = cv.rectangle(img_array, start_point, end_point, color, thickness)
+            # get the bounding boxes
+            boxes = pytesseract.image_to_boxes(threshold, output_type=pytesseract.Output.DICT)
 
-            # detection = Image.fromarray(img_array)
+            #draw the boxes one character at a time
+            for char in enumerate(boxes['char']):
+                #extract the bounding_boxes dimensions
+                (x, y, w, h) = (boxes['left'][char[0]],
+                                boxes['top'][char[0]],
+                                boxes['right'][char[0]],
+                                boxes['bottom'][char[0]])
 
-            return bounding_boxes
+                start_point = (x, y)  # top left
+                end_point = (x + w, y + h)
+                #image in RGBA Mode
+                color = (0, 255, 0)
+                thickness = 2
+                # draw the bounding boxes
+                img_array = cv.rectangle(img_array, start_point, end_point, color, thickness)
+
+            detection = Image.fromarray(img_array)
+
+            return detection
+
 
     def search_keyword(self, keyword):
 
